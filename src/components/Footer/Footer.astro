@@ -1,12 +1,11 @@
 ---
 import { ArrowOutward } from '@icons/ArrowOutward'
-import { X } from '@icons/X'
+import { Discord } from '@icons/Discord'
 
 import Link from '@/components/Link'
 import { mainMetaData } from '@/lib/metaData'
 
 import { SOCIAL_MEDIA_DATA } from '../socialMediaData'
-import LastUpdatedTime from './LastUpdatedTime.astro'
 
 type FooterContent = {
   title: string
@@ -20,7 +19,7 @@ type FooterContent = {
 
 const socialMediaData = [
   ...SOCIAL_MEDIA_DATA,
-  { icon: X, href: 'https://twitter.com/jestseee', name: 'twitter' }
+  { icon: Discord, href: 'https://discord.com/users/1280521689171497048', name: 'discord' }
 ]
 
 const FOOTER_CONTENTS: FooterContent[] = [
@@ -28,38 +27,21 @@ const FOOTER_CONTENTS: FooterContent[] = [
     title: 'Me',
     links: [
       { text: 'Projects', href: '/projects' },
-      { text: 'Blog', href: '/blog' },
-      { text: 'Bookmarks', href: '/bookmarks' }
-    ]
-  },
-  {
-    title: 'This site',
-    links: [
-      {
-        text: 'Analytics',
-        href: 'https://us.umami.is/share/Fmo9fhCyJtinAbWP/jestsee.com',
-        inNewTab: true
-      },
-      { text: 'RSS', href: '/rss.xml', inNewTab: true },
-      {
-        text: 'Source code',
-        href: 'https://github.com/jestsee/jestsee.com',
-        inNewTab: true
-      }
+      { text: 'Blog', href: '/blog' }
     ]
   },
   {
     title: 'Elsewhere',
     links: [
       {
-        text: 'Bluesky',
-        href: 'https://bsky.app/profile/jestsee.com',
+        text: 'Monkeytype',
+        href: 'https://monkeytype.com/profile/KyeeeTypesSlow',
         inNewTab: true,
         withIcon: true
       },
       {
-        text: 'Monkeytype',
-        href: 'https://monkeytype.com/profile/jestsee_',
+        text: 'Discord',
+        href: 'https://discord.com/users/1280521689171497048',
         inNewTab: true,
         withIcon: true
       }
@@ -98,8 +80,7 @@ const FOOTER_CONTENTS: FooterContent[] = [
       <div class='space-y-24'>
         <div class='space-y-3'>
           <p class='text-lg leading-none text-zinc-200'>
-            <span class='tracking-widest'> 王安琪 </span>
-            <span class='mx-[2px]'>•</span> Jesica
+            Kye
           </p>
           <p
             class='text-[13px] text-zinc-500'
@@ -117,15 +98,12 @@ const FOOTER_CONTENTS: FooterContent[] = [
                     aria-label={name}
                     class='group'
                   >
-                    <Icon className='size-5 rounded group-focus-within:outline outline-offset-4 outline-emerald-300' />
+                    <Icon className='size-5 rounded group-focus-within:outline outline-offset-4 outline-violet-300' />
                   </Link>
                 </li>
               ))
             }
           </ul>
-          <p class='text-xs text-zinc-500'>
-            © 2024 Jesica. All rights reserved.
-          </p>
         </div>
       </div>
 
@@ -161,7 +139,6 @@ const FOOTER_CONTENTS: FooterContent[] = [
             ))
           }
         </div>
-        <LastUpdatedTime class='text-zinc-500' />
       </div>
     </div>
   </div>

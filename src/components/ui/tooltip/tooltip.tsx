@@ -153,7 +153,7 @@ const Tooltip = React.forwardRef<
                 overrides: {
                   a: {
                     props: {
-                      className: 'text-emerald-400 hover:underline',
+                      className: 'text-violet-400 hover:underline',
                       target: '_blank'
                     }
                   }

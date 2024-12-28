@@ -35,14 +35,6 @@ export default defineConfig({
 
   env: {
     schema: {
-      MAPTILER_API_KEY: envField.string({
-        context: 'server',
-        access: 'secret'
-      }),
-      GITHUB_ACCESS_TOKEN: envField.string({
-        context: 'server',
-        access: 'secret'
-      }),
       SPOTIFY_CLIENT_ID: envField.string({
         context: 'server',
         access: 'secret'
@@ -60,22 +52,22 @@ export default defineConfig({
         access: 'secret'
       }),
 
-      PUBLIC_VERCEL_ENV: envField.string({
-        context: 'client',
-        access: 'public',
-        optional: true,
-        default: 'development'
-      }),
-      PUBLIC_VERCEL_PROJECT_PRODUCTION_URL: envField.string({
-        context: 'client',
-        access: 'public',
-        optional: true
-      }),
-      PUBLIC_VERCEL_URL: envField.string({
-        context: 'client',
-        access: 'public',
-        optional: true
-      })
+      // PUBLIC_VERCEL_ENV: envField.string({
+      //   context: 'client',
+      //   access: 'public',
+      //   optional: true,
+      //   default: 'development'
+      // }),
+      // PUBLIC_VERCEL_PROJECT_PRODUCTION_URL: envField.string({
+      //   context: 'client',
+      //   access: 'public',
+      //   optional: true
+      // }),
+      // PUBLIC_VERCEL_URL: envField.string({
+      //   context: 'client',
+      //   access: 'public',
+      //   optional: true
+      // })
     }
   },
 

@@ -1,8 +1,12 @@
 ---
+import Image from 'astro/components/Image.astro'
+
 import Keyboard from '../_components/Keyboard.astro'
 ---
 
-<section class='flex h-screen flex-col gap-8 pb-32 pt-24 sm:justify-center'>
+<section class='flex flex-row-reverse justify-center items-center max-md:flex-col'>
+  <Image width={1024} height={1024} src="/favicon.png" alt="Kye" class="enter-animation" />
+  <div class="flex h-screen flex-col gap-8 pb-32 pt-24 sm:justify-center">
   <div
     class:list={[
       'flex w-fit items-center rounded-full',
@@ -14,10 +18,10 @@ import Keyboard from '../_components/Keyboard.astro'
   >
     <div class='relative size-3'>
       <div
-        class='absolute size-full animate-ping rounded-full bg-green-300 opacity-65'
+        class='absolute size-full animate-ping rounded-full bg-violet-300 opacity-65'
       >
       </div>
-      <div class='drop-shadow-green size-full rounded-full bg-green-400'></div>
+      <div class='drop-shadow-green size-full rounded-full bg-violet-400'></div>
     </div>
     <h3 class='text-sm text-slate-200 max-xs:text-xs'>
       Available for projects
@@ -26,20 +30,22 @@ import Keyboard from '../_components/Keyboard.astro'
   <h1
     class='enter-animation text-[clamp(2rem,7vw,3rem)] font-medium leading-[1.05] tracking-tight'
   >
-    Hi, I’m Jesica. <br /> A software engineer.
+    Hi, I’m Kye.
   </h1>
   <h2
     class='enter-animation mb-8 max-w-xl leading-relaxed text-slate-400 max-sm:text-sm'
   >
-    Mainly working in the JavaScript ecosystem, I’m a dedicated problem-solver
-    who thrives on learning and building.
+    I'm a self taught artist, graphic designer and enjoy challenging myself with
+    various projects. My current extra hobbies include monkeytype and
+    programming.
   </h2>
   <Keyboard class='enter-animation' />
+  </div>
 </section>
 
 <style is:global>
   .drop-shadow-green {
-    filter: drop-shadow(0px 0px 8px #59ff7e);
+    filter: drop-shadow(0px 0px 8px #a78bfa);
   }
 
   .enter-animation {

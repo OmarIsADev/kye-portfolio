@@ -4,14 +4,12 @@ import type { MarkdownHeading } from 'astro'
 import type { InferEntrySchema } from 'astro:content'
 
 import BlogInfo from '@/components/BlogInfo.astro'
-import { ArrowOutward } from '@/components/icons/ArrowOutward'
 import Image from '@/components/Image'
-import Link, { LinkArticle } from '@/components/Link'
+import Link from '@/components/Link'
 import SEO from '@/components/SEO.astro'
 import TableOfContent from '@/components/TableOfContent'
 import ScrollProgressBar from '@/components/ui/scroll-progress-bar'
 import { BASE_URL } from '@/lib/baseUrl'
-import { formatDateByTimeZone } from '@/lib/utils'
 
 import BaseLayout from '../BaseLayout.astro'
 
@@ -27,8 +25,6 @@ const {
   description,
   heroImage,
   pubDate,
-  updatedDate,
-  latestCommitUrl,
   tags,
   readingTime
 } = Astro.props
@@ -98,19 +94,6 @@ const {
       ]}
     >
       <slot />
-      {
-        updatedDate && (
-          <p class='!mt-8 text-zinc-500'>
-            Last updated on {formatDateByTimeZone(updatedDate)} UTC+7.
-            {latestCommitUrl && (
-              <LinkArticle href={latestCommitUrl}>
-                See Changelog{''}
-                <ArrowOutward className='inline-block size-3 ml-1' />
-              </LinkArticle>
-            )}
-          </p>
-        )
-      }
     </article>
 
     <aside class='w-60 shrink-0 space-y-8 max-lg:hidden'>

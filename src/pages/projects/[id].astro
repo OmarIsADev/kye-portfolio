@@ -23,11 +23,6 @@ export const getStaticPaths = (async () => {
 const { entry } = Astro.props
 const { Content, headings } = await render(entry)
 
-const getLastUpdatedTime = client.api.github['last-updated-file']
-const { latestCommitUrl, lastUpdatedTime } = await getLastUpdatedTime
-  .$get({ query: { path: `projects/${entry.id}.mdx` } })
-  .then((res) => res.json())
-
 const { minutes, words } = readingTime(entry.body!)
 
 const projectStructuredData = getProjectSchema(entry)
@@ -62,8 +57,6 @@ const jsonLd = {
   slug={entry.id}
   readingTime={Math.ceil(minutes)}
   wordsCount={words}
-  updatedDate={new Date(lastUpdatedTime)}
-  latestCommitUrl={latestCommitUrl}
   {...entry.data}
 >
   <script

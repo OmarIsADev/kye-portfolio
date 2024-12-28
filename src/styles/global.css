@@ -80,7 +80,7 @@
 }
 
 :focus-visible {
-  @apply outline outline-2 outline-offset-2 outline-emerald-300;
+  @apply outline outline-2 outline-offset-2 outline-violet-300;
 }
 
 @keyframes fade-in-bottom {

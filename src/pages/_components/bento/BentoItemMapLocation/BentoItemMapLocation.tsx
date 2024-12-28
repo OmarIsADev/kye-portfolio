@@ -108,8 +108,8 @@ const BentoItemMapLocation = ({ className }: Props) => {
       </MapContainer>
       <div className='absolute inset-0 flex items-center justify-center'>
         <div className='relative size-16'>
-          <div className='absolute size-full animate-ping rounded-full bg-emerald-300/20 opacity-65 blur-sm'></div>
-          <div className='drop-shadow-green size-full rounded-full bg-emerald-400/30'></div>
+          <div className='absolute size-full animate-ping rounded-full bg-violet-300/20 opacity-65 blur-sm'></div>
+          <div className='drop-shadow-green size-full rounded-full bg-violet-400/30'></div>
         </div>
       </div>
 
